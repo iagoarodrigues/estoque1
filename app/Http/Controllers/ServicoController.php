@@ -48,8 +48,7 @@ class ServicoController extends Controller
         $messages = [
          'nome.required'          => 'O campo :attribute é obrigatório!',
          'nome.min'               => 'O :attribute precisa ter no mínimo :min.',
-         'quantidade.required'    => 'O :attribute é obrigatório!',
-         'quantidade.integer'     => 'A :attribute é obrigatória!'
+   
         ];
 
             $validated = $request->validate([
@@ -60,7 +59,6 @@ class ServicoController extends Controller
         
         $servico = new Servico;
         $servico->nome           = $request->nome;
-        $servico->quantidade     = $request->quantidade;
         $servico->valor          = $request->valor;
         $servico->save();
 
@@ -109,7 +107,6 @@ class ServicoController extends Controller
         //dd('UPDATE')
         $servico = Servico::find($id);
         $servico->nome          = $request->nome;
-        $servico->quantidade    = $request->quantidade;
         $servico->valor         = $request->valor;
         $servico->save();
 
