@@ -36,7 +36,7 @@
       @foreach ($produtos as $value)
     
       <tr>
-         <td>{{ $value->id          }}</td>
+         <td>{{ $value->id            }}</td>
          <td>{{ $value->nome          }}</td>
          <td>{{ $value->quantidade    }}</td>
          <td>{{ $value->valor         }}</td>

@@ -15,8 +15,6 @@
 
       <p><strong>id:</strong> {{ $salao->id                  }}</p>
       <p><strong>nome:</strong> {{ $salao->nome              }}</p>
-      <p><strong>quantidade:</strong> {{ $salao->quantidade  }}</p>
-      <p><strong>valor:</strong> R$ {{ $salao->valor         }}</p>
       <p><strong>criação:</strong> {{ $salao->created_at     }}</p>
 
     

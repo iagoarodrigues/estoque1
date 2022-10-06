@@ -13,11 +13,11 @@
 @section('content')
       <p>Conteúdo</p>
 
-      <p><strong>id:</strong> {{ $cliente->id                  }}</p>
-      <p><strong>nome:</strong> {{ $cliente->nome              }}</p>
-      <p><strong>quantidade:</strong> {{ $cliente->quantidade  }}</p>
-      <p><strong>valor:</strong> R$ {{ $cliente->valor         }}</p>
-      <p><strong>criação:</strong> {{ $cliente->created_at     }}</p>
+      <p><strong>ID:</strong>       {{$cliente->id}}</p>
+      <p><strong>Nome:</strong>     {{$cliente->nome}}</p>
+      <p><strong>CPF:</strong>      {{$cliente->cpf}}</p>
+      <p><strong>Telefone:</strong> {{$cliente->telefone}}</p>
+      <p><strong>E-mail:</strong>   {{$cliente->email}}</p>
 
     
 @endsection

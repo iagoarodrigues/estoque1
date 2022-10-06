@@ -7,7 +7,7 @@ use Illuminate\Database\Seeder;
 use Database\Seeders\ProdutoSeeder;
 
 use Database\Seeders\CategoriaSeeder;
-use Database\Seeders\UsuarioSeeder;
+use Database\Seeders\UserSeeder;
 use Database\Seeders\ProfissionalSeeder;
 use Database\Seeders\ClienteSeeder;
 use Database\Seeders\SalaoSeeder;
@@ -27,7 +27,7 @@ class DatabaseSeeder extends Seeder
         ProdutoSeeder::class,
         ProfissionalSeeder::class,
         ServicoSeeder::class,
-        UsuarioSeeder::class,
+        UserSeeder::class,
         SalaoSeeder::class,
         ServicoSeeder::class,
         CategoriaSeeder::class,

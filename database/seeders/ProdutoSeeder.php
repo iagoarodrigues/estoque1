@@ -18,19 +18,19 @@ class ProdutoSeeder extends Seeder
         Produto::create([
             'nome'          =>'Teclado',
             'quantidade'    => 10,
-            'valor'         => 260
+            'valor'         => 123
         ]);
 
         Produto::create([
             'nome'          =>'Mouse',
             'quantidade'    => 5,
-            'valor'         => 150
+            'valor'         => 123
         ]);
 
         Produto::create([
             'nome'          =>'Monitor 29',
             'quantidade'    => 20,
-            'valor'         => 2200
+            'valor'         => 123
         ]);
 
     }

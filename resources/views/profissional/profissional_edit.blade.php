@@ -17,12 +17,6 @@
 
       {{  Form::label('nome', 'Nome:') }} <br>
       {{  Form::text('nome', $profissional->nome) }} <br><br>
-
-      {{  Form::label('quantidade', 'Quantidade:') }} <br>
-      {{  Form::text('quantidade',  $profissional->quantidade) }} <br><br>
-
-      {{  Form::label('valor', 'Valor:') }} <br>
-      {{  Form::text('valor',  $profissional->valor) }} <br><br>
    
       {{  Form::submit('Enviar') }}
 

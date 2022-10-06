@@ -1,4 +1,4 @@
-<!-- resources/views/usuario.index.php -->
+<!-- resources/views/user.index.php -->
  
 @extends('adminlte::page')
  
@@ -7,7 +7,7 @@
 @section('sidebar')
     @parent
  
-      <p> Usuario - Index </p>
+      <p> user - Index </p>
 @endsection
 
 @section('content')
@@ -18,7 +18,7 @@
     </div>
 @endif
 
-<a href="{{ url('usuario/create') }}">CRIAR</a>
+<a href="{{ url('user/create') }}">CRIAR</a>
 
       <p> Conteúdo </p>
 
@@ -32,18 +32,18 @@
          <th></th>
       </tr>
 
-      @foreach ($usuarios as $value)
+      @foreach ($users as $value)
     
       <tr>
-        <td>{{ $value->id          }}</td>
-        <td>{{ $value->nome          }}</td>
-        <td>{{ $value->cpf    }}</td>
-        <td>{{ $value->telefone    }}</td>
-        <td>{{ $value->email         }}</td>
-         <td><a href="{{ url('usuario/' . $value->id) }}">Visualizar</a></td> 
-         <td><a href="{{ url('usuario/' . $value->id . '/edit') }}">Editar</a></td>
+        <td>{{ $value->id}}</td>
+        <td>{{ $value->name}}</td>
+        <td>{{ $value->cpf}}</td>
+        <td>{{ $value->telefone}}</td>
+        <td>{{ $value->email}}</td>
+         <td><a href="{{ url('user/' . $value->id) }}">Visualizar</a></td> 
+         <td><a href="{{ url('user/' . $value->id . '/edit') }}">Editar</a></td>
          <td>
-          {!! Form::open(['url' => 'usuario/' . $value->id, 'method' => 'delete']) !!}
+          {!! Form::open(['url' => 'user/' . $value->id, 'method' => 'delete']) !!}
           {{  Form::submit('Deletar') }}
     
           {!! Form::close() !!}

@@ -25,8 +25,6 @@
     <table>
       <tr>
          <th>nome</th>
-         <th>quantidade</th>
-         <th>valor</th>
          <th></th>
          <th></th>
          <th></th>
@@ -37,8 +35,7 @@
       <tr>
         <td>{{ $value->id          }}</td>
         <td>{{ $value->nome          }}</td>
-        <td>{{ $value->quantidade    }}</td>
-        <td>{{ $value->valor         }}</td>
+      
          <td><a href="{{ url('profissional/' . $value->id) }}">Visualizar</a></td> 
          <td><a href="{{ url('profissional/' . $value->id . '/edit') }}">Editar</a></td>
          <td>

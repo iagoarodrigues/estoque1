@@ -47,21 +47,15 @@ class SalaoController extends Controller
 
         $messages = [
          'nome.required'          => 'O campo :attribute é obrigatório!',
-         'nome.min'               => 'O :attribute precisa ter no mínimo :min.',
-         'quantidade.required'    => 'O :attribute é obrigatório!',
-         'quantidade.integer'     => 'A :attribute é obrigatória!'
+         'nome.min'               => 'O :attribute precisa ter no mínimo :min.'
         ];
 
             $validated = $request->validate([
-                'nome'         => 'required|min:2',
-                'quantidade'   => 'required|integer',
-                'valor'        => 'required',
+                'nome'         => 'required|min:2'
         ], $messages);
         
         $salao = new Salao;
         $salao->nome           = $request->nome;
-        $salao->quantidade     = $request->quantidade;
-        $salao->valor          = $request->valor;
         $salao->save();
 
         return redirect('/salao')->with('status', 'Salao criado com sucessso!');
@@ -109,8 +103,6 @@ class SalaoController extends Controller
         //dd('UPDATE')
         $salao = Salao::find($id);
         $salao->nome          = $request->nome;
-        $salao->quantidade    = $request->quantidade;
-        $salao->valor         = $request->valor;
         $salao->save();
 
         return redirect('/salao')->with('status', 'Salao atualizado com sucesso!');

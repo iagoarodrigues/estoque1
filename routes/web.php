@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
 use App\Http\Controllers\CategoriaController;
-use App\Http\Controllers\UsuarioController;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProfissionalController;
 use App\Http\Controllers\SalaoController;
 use App\Http\Controllers\ClienteController;
@@ -85,26 +85,26 @@ Route::delete('/categoria/{id}', [CategoriaController::class, 'destroy'])->name(
 //*--------------------------------INICIO DA ROTA USUARIO------------------------------------------*//
 
 //INDEX
-Route::get('/usuario', [UsuarioController::class, 'index'])->name('usuario.index');
+Route::get('/user', [UserController::class, 'index'])->name('user.index');
 
 //CREATE
-Route::get('usuario/create', [UsuarioController::class, 'create'])->name('usuario.create');
+Route::get('user/create', [UserController::class, 'create'])->name('user.create');
 
 //STORE
-Route::post('usuario/create', [UsuarioController::class, 'store'])->name('usuario.store');
+Route::post('user/create', [UserController::class, 'store'])->name('user.store');
 
 //SHOW 
-Route::get('/usuario/{id}', [UsuarioController::class, 'show'])->name('usuario.show');
+Route::get('/user/{id}', [UserController::class, 'show'])->name('user.show');
 
 //EDIT
-Route::get('/usuario/{id}/edit', [UsuarioController::class, 'edit'])->name('usuario.edit');
+Route::get('/user/{id}/edit', [UserController::class, 'edit'])->name('user.edit');
 
 //UPDATE
-Route::put('/usuario/{id}', [UsuarioController::class, 'update'])->name('usuario.update');
+Route::put('/user/{id}', [UserController::class, 'update'])->name('user.update');
 
 
 //DELETE
-Route::delete('/usuario/{id}', [UsuarioController::class, 'destroy'])->name('usuario.delete');
+Route::delete('/user/{id}', [UserController::class, 'destroy'])->name('user.delete');
 
 
 //*--------------------------------FIM DA ROTA USUARIO-------------------------------------------*//

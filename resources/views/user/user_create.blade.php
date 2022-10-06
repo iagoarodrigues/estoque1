@@ -1,4 +1,4 @@
-<!-- resources/views/usuario.create.php -->
+<!-- resources/views/user.create.php -->
  
 @extends('adminlte::page')
  
@@ -7,7 +7,7 @@
 @section('sidebar')
     @parent
  
-      <p>Usuario - Create</p>
+      <p>user - Create</p>
 @endsection
 
 @section('content')
@@ -23,19 +23,28 @@
       </div>
       @endif
 
-      {!! Form::open(['url' => 'usuario/create']) !!}
+      {!! Form::open(['url' => 'user/create']) !!}
 
       {{  Form::label('nome', 'Nome:') }} <br>
       {{  Form::text('nome') }} <br><br>
 
       {{  Form::label('cpf', 'CPF:') }} <br>
-      {{  Form::text('quantidade') }} <br><br>
+      {{  Form::text('cpf') }} <br><br>
 
       {{  Form::label('telefone', 'Telefone:') }} <br>
       {{  Form::text('telefone') }} <br><br>
 
-      {{  Form::label('e-mail.', 'E-mail:') }} <br>
-      {{  Form::text('e-mail') }} <br><br>
+      {{  Form::label('email.', 'E-mail:') }} <br>
+      {{  Form::text('email') }} <br><br>
+      
+      <div class="col-6">
+         {{ Form::label('password', 'Senha:') }}
+         {{ Form::password('password', ['class' => 'form-control', 'placeholder' => 'Digite uma senha forte']) }}
+     </div>
+     <div class="col-6">
+         {{ Form::label('password', 'Confirmar senha:') }}
+         {{ Form::password('confirm-password', array('class' => 'form-control ', 'placeholder' => 'Digite novamente')) }}
+     </div>
 
       {{  Form::submit('Enviar') }}
 

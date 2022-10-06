@@ -1,4 +1,4 @@
-<!-- resources/views/cliente.create.php -->
+<!-- resources/views/user.create.php -->
  
 @extends('adminlte::page')
  
@@ -7,25 +7,25 @@
 @section('sidebar')
     @parent
  
-      <p>Cliente - Edit</p>
+      <p>user - Edit</p>
 @endsection
 
 @section('content')
       <p>Formulário</p>
 
-      {!! Form::open(['url' => 'cliente/' . $cliente->id, 'method' => 'put']) !!}
+      {!! Form::open(['url' => 'user/' . $user->id, 'method' => 'put']) !!}
 
       {{  Form::label('nome', 'Nome:') }} <br>
-      {{  Form::text('nome', $cliente->nome) }} <br><br>
+      {{  Form::text('nome', $user->nome) }} <br><br>
 
       {{  Form::label('cpf', 'CPF:') }} <br>
-      {{  Form::text('cpf',  $cliente->cpf) }} <br><br>
+      {{  Form::text('cpf',  $user->cpf) }} <br><br>
 
       {{  Form::label('telefone', 'Telefone:') }} <br>
-      {{  Form::text('telefone',  $cliente->telefone) }} <br><br>
+      {{  Form::text('telefone',  $user->telefone) }} <br><br>
 
       {{  Form::label('email', 'E-mail:') }} <br>
-      {{  Form::text('email',  $cliente->email) }} <br><br>
+      {{  Form::text('email',  $user->email) }} <br><br>
 
       {{  Form::submit('Enviar') }}
 

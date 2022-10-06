@@ -34,10 +34,11 @@
       @foreach ($clientes as $value)
     
       <tr>
-        <td>{{ $value->id          }}</td>
-        <td>{{ $value->nome          }}</td>
-        <td>{{ $value->quantidade    }}</td>
-        <td>{{ $value->valor         }}</td>
+        <td>{{ $value->id}}</td>
+        <td>{{ $value->nome}}</td>
+        <td>{{ $value->cpf}}</td>
+        <td>{{ $value->telefone}}</td>
+        <td>{{ $value->email}}</td>
          <td><a href="{{ url('cliente/' . $value->id) }}">Visualizar</a></td> 
          <td><a href="{{ url('cliente/' . $value->id . '/edit') }}">Editar</a></td>
          <td>
