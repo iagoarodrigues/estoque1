@@ -13,13 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('servicos', function (Blueprint $table) {
+        Schema::create('usuarios', function (Blueprint $table) {
             $table->id();
             $table->string('nome');
-<<<<<<< Updated upstream
-            $table->float('valor');
-=======
->>>>>>> Stashed changes
+            $table->integer('cpf');
+            $table->string('email');
+            $table->integer('telefone');
             $table->timestamps();
         });
     }
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('servicos');
+        Schema::dropIfExists('usuarios');
     }
 };

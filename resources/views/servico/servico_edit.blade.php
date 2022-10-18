@@ -18,9 +18,12 @@
       {{  Form::label('nome', 'Nome:') }} <br>
       {{  Form::text('nome', $servico->nome) }} <br><br>
 
+<<<<<<< Updated upstream
       {{  Form::label('valor', 'Valor:') }} <br>
       {{  Form::text('valor',  $servico->valor) }} <br><br>
 
+=======
+>>>>>>> Stashed changes
       {{  Form::submit('Enviar') }}
 
       {!! Form::close() !!}

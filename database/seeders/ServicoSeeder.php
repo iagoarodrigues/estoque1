@@ -17,17 +17,28 @@ class ServicoSeeder extends Seeder
     {
         Servico::create([
             'nome'          =>'Teclado',
+<<<<<<< Updated upstream
             'valor'         => 260
+=======
+>>>>>>> Stashed changes
         ]);
 
         Servico::create([
             'nome'          =>'Mouse',
+<<<<<<< Updated upstream
             'valor'         => 150
+=======
+            
+>>>>>>> Stashed changes
         ]);
 
         Servico::create([
             'nome'          =>'Monitor 29',
+<<<<<<< Updated upstream
             'valor'         => 2200
+=======
+            
+>>>>>>> Stashed changes
         ]);
     }
 }

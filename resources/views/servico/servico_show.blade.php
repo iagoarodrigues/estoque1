@@ -16,7 +16,10 @@
       
       <p><strong>id:</strong> {{ $servico->id                  }}</p>
       <p><strong>nome:</strong> {{ $servico->nome              }}</p>
+<<<<<<< Updated upstream
       <p><strong>valor:</strong> R$ {{ $servico->valor         }}</p>
+=======
+>>>>>>> Stashed changes
       <p><strong>criação:</strong> {{ $servico->created_at     }}</p>
     
 @endsection

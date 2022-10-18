@@ -47,6 +47,7 @@ class ServicoController extends Controller
 
         $messages = [
          'nome.required'          => 'O campo :attribute é obrigatório!',
+<<<<<<< Updated upstream
          'nome.min'               => 'O :attribute precisa ter no mínimo :min.',
    
         ];
@@ -54,11 +55,22 @@ class ServicoController extends Controller
             $validated = $request->validate([
                 'nome'         => 'required|min:3',
                 'valor'        => 'required'
+=======
+         'nome.min'               => 'O :attribute precisa ter no mínimo :min.'
+        ];
+
+            $validated = $request->validate([
+                'nome'         => 'required|min:2',
+
+>>>>>>> Stashed changes
         ], $messages);
         
         $servico = new Servico;
         $servico->nome           = $request->nome;
+<<<<<<< Updated upstream
         $servico->valor          = $request->valor;
+=======
+>>>>>>> Stashed changes
         $servico->save();
 
         return redirect('/servico')->with('status', 'Servico criado com sucessso!');
@@ -106,7 +118,10 @@ class ServicoController extends Controller
         //dd('UPDATE')
         $servico = Servico::find($id);
         $servico->nome          = $request->nome;
+<<<<<<< Updated upstream
         $servico->valor         = $request->valor;
+=======
+>>>>>>> Stashed changes
         $servico->save();
 
         return redirect('/servico')->with('status', 'Servico atualizado com sucesso!');

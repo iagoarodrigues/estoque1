@@ -26,7 +26,10 @@
       <tr>
          <th>id</th>
          <th>nome</th>
+<<<<<<< Updated upstream
          <th>valor</th>
+=======
+>>>>>>> Stashed changes
          <th></th>
          <th></th>
       </tr>
@@ -36,7 +39,10 @@
       <tr>
         <td>{{ $value->id          }}</td>
         <td>{{ $value->nome          }}</td>
+<<<<<<< Updated upstream
         <td>{{ $value->valor         }}</td>
+=======
+>>>>>>> Stashed changes
          <td><a href="{{ url('servico/' . $value->id) }}">Visualizar</a></td> 
          <td><a href="{{ url('servico/' . $value->id . '/edit') }}">Editar</a></td>
          <td>

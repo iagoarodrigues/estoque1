@@ -1,4 +1,4 @@
-<!-- resources/views/servico.create.php -->
+<!-- resources/views/usuario.create.php -->
  
 @extends('adminlte::page')
  
@@ -7,7 +7,7 @@
 @section('sidebar')
     @parent
  
-      <p>Servico - Create</p>
+      <p>Usuario - Create</p>
 @endsection
 
 @section('content')
@@ -23,16 +23,20 @@
       </div>
       @endif
 
-      {!! Form::open(['url' => 'servico/create']) !!}
+      {!! Form::open(['url' => 'usuario/create']) !!}
+
       {{  Form::label('nome', 'Nome:') }} <br>
       {{  Form::text('nome') }} <br><br>
 
-<<<<<<< Updated upstream
-      {{  Form::label('valor', 'Valor:') }} <br>
-      {{  Form::text('valor') }} <br><br>
-      
-=======
->>>>>>> Stashed changes
+      {{  Form::label('cpf', 'CPF:') }} <br>
+      {{  Form::text('cpf') }} <br><br>
+
+      {{  Form::label('telefone', 'Telefone:') }} <br>
+      {{  Form::text('telefone') }} <br><br>
+
+      {{  Form::label('email.', 'E-mail:') }} <br>
+      {{  Form::text('email') }} <br><br>
+
       {{  Form::submit('Enviar') }}
 
       {!! Form::close() !!}
