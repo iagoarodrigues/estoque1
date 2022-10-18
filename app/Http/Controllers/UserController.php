@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
 {
@@ -46,13 +47,13 @@ class UserController extends Controller
         //dd($request->all());
 
         $messages = [
-         'name.required'          => 'O campo :attribute é obrigatório!',
+         'name.required'          => 'O campo :attribute é obrigatóri000o!',
          'name.min'               => 'O :attribute precisa ter no mínimo :min.'
         ];
 
             $validated = $request->validate([
                 'name'              => 'required|min:2',
-                'password.required' => 'O campo nome é obrigatório!',
+                'password.required' => 'O campo senha é obrigatório!',
                 'password.same'     => 'As senham precisam ser identicas!'
                 
         ], $messages);
@@ -95,7 +96,7 @@ class UserController extends Controller
     {
         $user = User::find($id);
         //dd($user);
-        return view('user.usuario_edit', ['user' => $user]);
+        return view('user.user_edit', ['user' => $user]);
     }
 
     /**

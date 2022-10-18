@@ -16,7 +16,7 @@
       {!! Form::open(['url' => 'user/' . $user->id, 'method' => 'put']) !!}
 
       {{  Form::label('nome', 'Nome:') }} <br>
-      {{  Form::text('nome', $user->nome) }} <br><br>
+      {{  Form::text('name', $user->name) }} <br><br>
 
       {{  Form::label('cpf', 'CPF:') }} <br>
       {{  Form::text('cpf',  $user->cpf) }} <br><br>

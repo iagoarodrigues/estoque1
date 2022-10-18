@@ -47,21 +47,19 @@ class ClienteController extends Controller
 
         $messages = [
          'nome.required'          => 'O campo :attribute é obrigatório!',
-         'nome.min'               => 'O :attribute precisa ter no mínimo :min.',
-         'quantidade.required'    => 'O :attribute é obrigatório!',
-         'quantidade.integer'     => 'A :attribute é obrigatória!'
+         'nome.min'               => 'O :attribute precisa ter no mínimo :min.'
         ];
 
             $validated = $request->validate([
-                'nome'         => 'required|min:2',
-                'quantidade'   => 'required|integer',
-                'valor'        => 'required',
+                'nome'         => 'required|min:2'
+            
         ], $messages);
         
         $cliente = new Cliente;
-        $cliente->nome           = $request->nome;
-        $cliente->quantidade     = $request->quantidade;
-        $cliente->valor          = $request->valor;
+        $cliente->nome          = $request->nome;
+        $cliente->cpf            = $request->cpf;
+        $cliente->telefone       = $request->telefone;
+        $cliente->email          = $request->email;
         $cliente->save();
 
         return redirect('/cliente')->with('status', 'cliente criado com sucessso!');
@@ -108,9 +106,10 @@ class ClienteController extends Controller
     {
         //dd('UPDATE')
         $cliente = Cliente::find($id);
-        $cliente->nome          = $request->nome;
-        $cliente->quantidade    = $request->quantidade;
-        $cliente->valor         = $request->valor;
+        $cliente->nome           = $request->nome;
+        $cliente->cpf            = $request->cpf;
+        $cliente->telefone       = $request->telefone;
+        $cliente->email          = $request->email;
         $cliente->save();
 
         return redirect('/cliente')->with('status', 'cliente atualizado com sucesso!');

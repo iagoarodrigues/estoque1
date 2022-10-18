@@ -26,7 +26,7 @@
       {!! Form::open(['url' => 'user/create']) !!}
 
       {{  Form::label('nome', 'Nome:') }} <br>
-      {{  Form::text('nome') }} <br><br>
+      {{  Form::text('name') }} <br><br>
 
       {{  Form::label('cpf', 'CPF:') }} <br>
       {{  Form::text('cpf') }} <br><br>

@@ -52,9 +52,8 @@ class ServicoController extends Controller
         ];
 
             $validated = $request->validate([
-                'nome'         => 'required|min:8',
-                'quantidade'   => 'required|integer',
-                'valor'        => 'required',
+                'nome'         => 'required|min:3',
+                'valor'        => 'required'
         ], $messages);
         
         $servico = new Servico;

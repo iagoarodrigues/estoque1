@@ -26,9 +26,9 @@
       <tr>
         <th>id</th>
         <th>nome</th>
-        <th>quantidade</th>
-        <th>valor</th>
-       
+        <th>cpf</th>
+        <th>telefone</th>
+        <th>email</th>
       </tr>
 
       @foreach ($clientes as $value)
